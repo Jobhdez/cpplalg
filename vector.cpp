@@ -36,6 +36,7 @@ public:
         }
         return result;
     }
+  
   Vector operator-(const Vector& other) const {
     if (elements.size() != other.elements.size()) {
       std::cerr << "Error: Vectors must be of equal size for subtraction." << std::endl;
@@ -48,6 +49,14 @@ public:
     return result;
   }
 
+  Vector mulByScalar(const double scalar) const {
+    Vector result;
+    for (size_t i = 0; i < elements.size(); i++) {
+      result.elements.push_back(elements[i] * scalar);
+    }
+    return result;
+  }
+  
   Vector power(const double scalar) const {
     Vector result;
     for (size_t i = 0; i < elements.size(); i++) {
@@ -55,6 +64,7 @@ public:
     }
    return  result;
   }
+  
   Vector exponent() {
     Vector result;
     for (size_t i = 0; i < elements.size(); i++) {
@@ -75,6 +85,7 @@ int main() {
     Vector v4 = v2 - v1;
     Vector v5 = v1.power(3.0);
     Vector v6 = v1.exponent();
+    Vector v7 = v1.mulByScalar(3.0);
 
     
     std::vector<double> result_elements = v3.getElements();
@@ -100,5 +111,12 @@ int main() {
         std::cout << element << " ";
     }
     std::cout << std::endl;
+
+    std::vector<double> result_elements5 = v7.getElements();
+    for (double element : result_elements5) {
+        std::cout << element << " ";
+    }
+    std::cout << std::endl;
+
     return 0;
 }
