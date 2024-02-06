@@ -17,7 +17,6 @@ public:
 
     
     ~Vector() {}
-
     
     std::vector<double> getElements() const {
         return elements;
