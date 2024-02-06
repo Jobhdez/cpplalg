@@ -55,6 +55,13 @@ public:
     }
    return  result;
   }
+  Vector exponent() {
+    Vector result;
+    for (size_t i = 0; i < elements.size(); i++) {
+      result.elements.push_back(exp(elements[i]));
+    }
+    return result;
+  }
 };
 
 int main() {
@@ -67,6 +74,8 @@ int main() {
     Vector v3 = v1 + v2;
     Vector v4 = v2 - v1;
     Vector v5 = v1.power(3.0);
+    Vector v6 = v1.exponent();
+
     
     std::vector<double> result_elements = v3.getElements();
     for (double element : result_elements) {
@@ -86,5 +95,10 @@ int main() {
     }
     std::cout << std::endl;
 
+    std::vector<double> result_elements4 = v6.getElements();
+    for (double element : result_elements4) {
+        std::cout << element << " ";
+    }
+    std::cout << std::endl;
     return 0;
 }
