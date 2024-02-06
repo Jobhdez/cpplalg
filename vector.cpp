@@ -61,6 +61,14 @@ public:
     return result;
   }
 
+  Vector logarithm() {
+    Vector result;
+    for (size_t i = 0; i < elements.size(); ++i) {
+      result.elements.push_back(log(elements[i]));
+    }
+    return result;
+  }
+
   Vector mulByScalar(const double scalar) const {
     Vector result;
     for (size_t i = 0; i < elements.size(); i++) {
@@ -99,7 +107,7 @@ int main() {
     Vector v6 = v1.exponent();
     Vector v7 = v1.mulByScalar(3.0);
     double d1 = v1 * v2;
-    
+    Vector v8 = v1.logarithm(); 
     std::vector<double> result_elements = v3.getElements();
     for (double element : result_elements) {
         std::cout << element << " ";
@@ -129,6 +137,15 @@ int main() {
         std::cout << element << " ";
     }
     std::cout << std::endl;
+    
     std::cout << d1 << " ";
+
+    std::vector<double> result_elements6 = v8.getElements();
+    for (double element : result_elements6) {
+        std::cout << element << " ";
+	}
+    std::cout << std::endl;
+
+    std::cout << std::endl;
     return 0;
 }
