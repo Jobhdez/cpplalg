@@ -36,6 +36,18 @@ public:
         }
         return result;
     }
+
+  double operator*(const Vector& other) const {
+  
+    std::vector<double> v1(elements.size());
+    double sum = 0;
+    for (size_t i = 0; i < elements.size(); ++i) {
+      v1[i] = elements[i] * other.elements[i];
+      sum = sum + v1[i];
+    }
+
+    return sum;
+  }
   
   Vector operator-(const Vector& other) const {
     if (elements.size() != other.elements.size()) {
@@ -86,7 +98,7 @@ int main() {
     Vector v5 = v1.power(3.0);
     Vector v6 = v1.exponent();
     Vector v7 = v1.mulByScalar(3.0);
-
+    double d1 = v1 * v2;
     
     std::vector<double> result_elements = v3.getElements();
     for (double element : result_elements) {
@@ -117,6 +129,6 @@ int main() {
         std::cout << element << " ";
     }
     std::cout << std::endl;
-
+    std::cout << d1 << " ";
     return 0;
 }
