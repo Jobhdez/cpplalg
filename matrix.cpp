@@ -62,6 +62,16 @@ public:
     }
     return result;
   }
+  Matrix power(const double scalar) const {
+    Matrix result(elements);
+    for (size_t i = 0; i < elements.size(); i++) {
+      for (size_t j = 0; j < elements[0].size(); j++) {
+	result.elements[i][j] = pow(elements[i][j], scalar);
+      }
+    }
+
+    return result;
+  }
 };
 
 int main() {
@@ -79,10 +89,13 @@ int main() {
 
   Matrix m5 = m2 * m1;
 
+  Matrix m6 = m5.power(2);
   m3.print_matrix();
   std::cout << std::endl;
   m4.print_matrix();
   std::cout << std::endl;
   m5.print_matrix();
+  std::cout << std::endl;
+  m6.print_matrix();
 }
   
