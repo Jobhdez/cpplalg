@@ -62,6 +62,16 @@ public:
     }
     return result;
   }
+
+  Matrix mulByScalar(const double scalar) const {
+    Matrix result(elements);
+    for (size_t i = 0; i < elements.size(); i++) {
+      for (size_t j = 0; j < elements[0].size(); j++) {
+	result.elements[i][j] = elements[i][j] * scalar;
+      }
+    }
+    return result;
+  }
   
   Matrix power(const double scalar) const {
     Matrix result(elements);
@@ -117,6 +127,7 @@ int main() {
   Matrix m7 = m5.exponent();
 
   Matrix m8 = m5.logarithm();
+  Matrix m9 = m2.mulByScalar(3.0);
   
   m3.print_matrix();
   std::cout << std::endl;
@@ -129,5 +140,7 @@ int main() {
   m7.print_matrix();
   std::cout << std::endl;
   m8.print_matrix();
+  std::cout << std::endl;
+  m9.print_matrix();
 }
   
