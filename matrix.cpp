@@ -62,6 +62,7 @@ public:
     }
     return result;
   }
+  
   Matrix power(const double scalar) const {
     Matrix result(elements);
     for (size_t i = 0; i < elements.size(); i++) {
@@ -82,6 +83,18 @@ public:
     }
     return result;
   }
+
+  Matrix logarithm() {
+    Matrix result(elements);
+    for (size_t i = 0; i < elements.size(); i++) {
+      for (size_t j = 0; j < elements[0].size(); j++) {
+	result.elements[i][j] = log(elements[i][j]);
+      }
+    }
+    return result;
+  }
+
+  
 };
 
 int main() {
@@ -100,7 +113,11 @@ int main() {
   Matrix m5 = m2 * m1;
 
   Matrix m6 = m5.power(2);
+  
   Matrix m7 = m5.exponent();
+
+  Matrix m8 = m5.logarithm();
+  
   m3.print_matrix();
   std::cout << std::endl;
   m4.print_matrix();
@@ -110,5 +127,7 @@ int main() {
   m6.print_matrix();
   std::cout << std::endl;
   m7.print_matrix();
+  std::cout << std::endl;
+  m8.print_matrix();
 }
   
