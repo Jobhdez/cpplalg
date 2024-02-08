@@ -92,7 +92,7 @@ public:
     return result;
   }
 };
-
+/*
 int main() {
     std::vector<double> v1_elements = {1.0, 2.0, 3.0};
     std::vector<double> v2_elements = {4.0, 5.0, 6.0};
@@ -138,6 +138,7 @@ int main() {
     std::cout << std::endl;
     
     std::cout << d1 << " ";
+    std::cout << std::endl;
 
     std::vector<double> result_elements6 = v8.getElements();
     for (double element : result_elements6) {
@@ -148,3 +149,5 @@ int main() {
     std::cout << std::endl;
     return 0;
 }
+
+*/
