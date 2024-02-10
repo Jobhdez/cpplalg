@@ -103,45 +103,4 @@ public:
     }
     return result;
   }
-
-  
 };
-/*
-int main() {
-  std::vector<std::vector<double>> m1_elements = {{3.0,4.0}, {2.0, 5.0}};
-
-  std::vector<std::vector<double>> m2_elements = {{4.0,5.0}, {6.0, 7.0}};
-
-  Matrix m1(m1_elements);
-
-  Matrix m2(m2_elements);
-
-  Matrix m3 = m1 + m1;
-
-  Matrix m4 = m2 - m1;
-
-  Matrix m5 = m2 * m1;
-
-  Matrix m6 = m5.power(2);
-  
-  Matrix m7 = m5.exponent();
-
-  Matrix m8 = m5.logarithm();
-  Matrix m9 = m2.mulByScalar(3.0);
-  
-  m3.print_matrix();
-  std::cout << std::endl;
-  m4.print_matrix();
-  std::cout << std::endl;
-  m5.print_matrix();
-  std::cout << std::endl;
-  m6.print_matrix();
-  std::cout << std::endl;
-  m7.print_matrix();
-  std::cout << std::endl;
-  m8.print_matrix();
-  std::cout << std::endl;
-  m9.print_matrix();
-}
-  
-*/
