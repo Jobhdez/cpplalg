@@ -11,4 +11,3 @@
 * g++ -std=c++14 vector_tests.cpp
 * ./a.out
 ```
-Note: matrix tests are not covered right now.
