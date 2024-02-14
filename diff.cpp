@@ -79,9 +79,9 @@ public:
 
     tuple<string, char, string> derivative()  {
         int derivative1 = lhs->derivative();
-        string e1 = mul_exp(rhs->get_exp(), derivative1); // Fixed here
+        string e1 = mul_exp(rhs->get_exp(), derivative1); 
         int derivative2 = rhs->derivative();
-        string e2 = mul_exp(lhs->get_exp(), derivative2); // Fixed here
+        string e2 = mul_exp(lhs->get_exp(), derivative2); 
         return make_tuple(e2, '+', e1);
     }
 };
