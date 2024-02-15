@@ -113,13 +113,20 @@ public:
     }
     return result;
   }
+  double trace() {
+    double sum = 0.0;
+    for (size_t i = 0; i < elements.size(); i++) {
+      sum += elements[i][i];
+    }
+    return sum;
+  }
 };
 /*
 int main(){
-  std::vector<std::vector<double>> elements = {{2,3,4}, {5,6,7}};
+  std::vector<std::vector<double>> elements = {{2,1,5},{2,3,4},{0,1,0}};
   Matrix m1(elements);
 
-  Matrix m2 = m1.transpose();
-  m2.print_matrix();
+  double m2 = m1.trace();
+  std::cout << m2 << std::endl;
 }
-*/  
+*/
