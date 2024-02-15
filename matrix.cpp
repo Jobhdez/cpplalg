@@ -103,4 +103,23 @@ public:
     }
     return result;
   }
+  Matrix transpose() {
+    Matrix result(std::vector<std::vector<double>>(elements[0].size(), std::vector<double>(elements.size())));
+
+    for (size_t i = 0; i < elements[0].size(); i++) {
+      for (size_t j = 0; j < elements.size(); j++) {
+	result.elements[i][j] = elements[j][i];
+      }
+    }
+    return result;
+  }
 };
+/*
+int main(){
+  std::vector<std::vector<double>> elements = {{2,3,4}, {5,6,7}};
+  Matrix m1(elements);
+
+  Matrix m2 = m1.transpose();
+  m2.print_matrix();
+}
+*/  
