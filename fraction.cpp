@@ -29,12 +29,19 @@ public:
 
     return Fraction(numer, denom);
   }
+
+  Fraction operator*(const Fraction& other) const {
+    return Fraction(numerator*other.numerator, denominator*other.denominator);
+  }
 };
 
 int main() {
   Fraction f1(2,3);
 
   Fraction f2 = f1 + f1;
+  Fraction f3 = f1 * f1;
 
   f2.print_fraction();
+  std::cout << std::endl;
+  f3.print_fraction();
 }
