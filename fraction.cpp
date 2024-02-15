@@ -37,17 +37,3 @@ public:
     return Fraction(numerator*other.denominator, denominator*other.numerator);
   }
 };
-
-int main() {
-  Fraction f1(2,3);
-
-  Fraction f2 = f1 + f1;
-  Fraction f3 = f1 * f1;
-  Fraction f4 = f1/f1;
-
-  f2.print_fraction();
-  std::cout << std::endl;
-  f3.print_fraction();
-  std::cout << std::endl;
-  f4.print_fraction();
-}
