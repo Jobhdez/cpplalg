@@ -55,6 +55,7 @@ public:
      string get_exp() const override {
        return lhs->get_exp() + " + " + rhs->get_exp();
      }
+  ~DiffSum() {}
 };
 
 std::string mul_exp(int e, int e2) {
@@ -84,6 +85,7 @@ public:
         string e2 = mul_exp(lhs->get_exp(), derivative2); 
         return make_tuple(e2, '+', e1);
     }
+  ~DiffProduct() {}
 };
 
 int main() {
