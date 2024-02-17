@@ -29,7 +29,7 @@ public:
     }
     return poly;
   }
-    Polynomial operator-(Polynomial& other) const {
+  Polynomial operator-(Polynomial& other) const {
     Polynomial poly(coefficients);
     for (size_t i = 0; i < coefficients.size(); i++) {
       poly.coefficients[i] = coefficients[i] - other.coefficients[i];
