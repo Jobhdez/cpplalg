@@ -72,7 +72,20 @@ public:
     }
     return result;
   }
-  
+  std::vector<double> mulByVector(const std::vector<double>& vec) const {
+    Matrix result(elements);
+    std::vector<double> resultVec(elements.size());
+    
+    for (size_t i = 0; i < elements.size(); i++) {
+        double sum = 0.0;
+        for (size_t j = 0; j < elements[i].size(); j++) {
+            sum += elements[i][j] * vec[j];
+        }
+        resultVec[i] = sum;
+    }
+    return resultVec;
+}
+
   Matrix power(const double scalar) const {
     Matrix result(elements);
     for (size_t i = 0; i < elements.size(); i++) {
@@ -121,12 +134,15 @@ public:
     return sum;
   }
 };
-/*
-int main(){
-  std::vector<std::vector<double>> elements = {{2,1,5},{2,3,4},{0,1,0}};
-  Matrix m1(elements);
 
-  double m2 = m1.trace();
-  std::cout << m2 << std::endl;
+int main(){
+  std::vector<std::vector<double>> elements = {{1,-1,2},{0,-3,1}};
+  Matrix m1(elements);
+  std::vector<double> vec = {2,1,0};
+
+  std::vector<double> v1 = m1.mulByVector(vec);
+  for (size_t i = 0; i < v1.size(); i++) {
+    std::cout << v1[i] << " " << std::endl;
+  }
 }
-*/
+
