@@ -30,6 +30,11 @@ public:
 
     return RationalExp(sumRat1, sumRat2);
   }
+  RationalExp operator*(RationalExp& other) const {
+    Polynomial p1 = numerator * other.numerator;
+    Polynomial p2 = denominator * other.denominator;
+    return RationalExp(p1, p2);
+  }
 };
 
 int main() {
@@ -39,7 +44,10 @@ int main() {
   RationalExp rat1(p1, p1);
   RationalExp r(rat1);
   RationalExp rat2 = rat1 + rat1;
+  RationalExp rat3 = rat1 * rat1;
+  
   rat2.print_rational_exp();
+  rat3.print_rational_exp();
 
   return 0;
 }
