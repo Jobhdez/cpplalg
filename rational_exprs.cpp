@@ -35,6 +35,11 @@ public:
     Polynomial p2 = denominator * other.denominator;
     return RationalExp(p1, p2);
   }
+  RationalExp operator/(RationalExp& other) const {
+    Polynomial p1 = numerator * other.denominator;
+    Polynomial p2 = denominator * other.numerator;
+    return RationalExp(p1, p2);
+  }
 };
 
 int main() {
@@ -45,9 +50,10 @@ int main() {
   RationalExp r(rat1);
   RationalExp rat2 = rat1 + rat1;
   RationalExp rat3 = rat1 * rat1;
-  
+  RationalExp rat4 = rat1 / rat1;
   rat2.print_rational_exp();
   rat3.print_rational_exp();
+  rat4.print_rational_exp();
 
   return 0;
 }
