@@ -1,1 +1,2 @@
 == to do ==
+implement some matrix calculus
