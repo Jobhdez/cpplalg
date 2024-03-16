@@ -9,7 +9,7 @@ private:
 public:
   RationalExp() {}
   RationalExp(const RationalExp& other) : numerator(other.numerator), denominator(other.denominator) {}
-  RationalExp(const Polynomial& p1,const  Polynomial& p2) : numerator(p1), denominator(p2) {}
+  RationalExp(const Polynomial& p1, const  Polynomial& p2) : numerator(p1), denominator(p2) {}
   ~RationalExp() {}
 
   void print_rational_exp() {
