@@ -21,6 +21,9 @@ public:
       exponent -= 1;
     }
   }
+  std::vector<double> getCoefficients() {
+    return coefficients;
+  }
 
   Polynomial operator+(const Polynomial& other) const {
     Polynomial poly(coefficients);
