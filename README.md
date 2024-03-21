@@ -6,16 +6,8 @@ Functionality includes:
    - Rational Expressions arithmetic
    - Polynomial arithmetic
 
-It is obviously a toy but thats how you learn :-)
-
-# Usage
-```
-* g++ matrix.cpp
-* ./a.out
-```
 
 * Tests
 ```
-* g++ -std=c++14 vector_tests.cpp
-* ./a.out
+$ make test 
 ```
