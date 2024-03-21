@@ -1,2 +1,3 @@
 == to do ==
-implement some matrix calculus
+- implement some matrix calculus
+- use templates and namespaces to make the structure like llvm libc's api :-)
