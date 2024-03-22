@@ -35,7 +35,21 @@ public:
       }
     }
 
+    return result;template<typename T>
+  vector<vector<T>> sub(const vector<vector<T>>& matrix1, const vector<vector<T>>& matrix2) {
+    assert(matrix1.size() == matrix2.size());
+    assert(matrix1[0].size() == matrix2[0].size());
+    vector<vector<T>> result_matrix;
+    result_matrix.reserve(matrix1.size());
+
+    for (size_t i = 0; i < matrix1.size(); i++) {
+      for (size_t j = 0; j < matrix1[0].size(); j++) {
+	result[i][j] = matrix1[i][j] + matrix2[i][j];
+      }
+    }
+
     return result;
+  }
   }
 
   Matrix operator-(const Matrix& other) const {
