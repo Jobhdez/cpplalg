@@ -6,9 +6,9 @@
 using namespace std;
 namespace LinearAlgebra {
 namespace Matrix {
-  
+
   template<typename T>
-vector<vector<T>> add(const vector<vector<T>>& matrix1, const vector<vector<T>>& matrix2) {
+  vector<vector<T>> add(const vector<vector<T>>& matrix1, const vector<vector<T>>& matrix2) {
     assert(matrix1.size() == matrix2.size());
     assert(matrix1[0].size() == matrix2[0].size());
     vector<vector<T>> result_matrix(matrix1.size(), vector<T>(matrix1[0].size()));
@@ -21,9 +21,8 @@ vector<vector<T>> add(const vector<vector<T>>& matrix1, const vector<vector<T>>&
 
     return result_matrix;
 }
-
-template<typename T>
-vector<vector<T>> sub(const vector<vector<T>>& matrix1, const vector<vector<T>>& matrix2) {
+  template<typename T>
+  vector<vector<T>> sub(const vector<vector<T>>& matrix1, const vector<vector<T>>& matrix2) {
     assert(matrix1.size() == matrix2.size());
     assert(matrix1[0].size() == matrix2[0].size());
     vector<vector<T>> result_matrix(matrix1.size(), vector<T>(matrix1[0].size()));
@@ -36,9 +35,8 @@ vector<vector<T>> sub(const vector<vector<T>>& matrix1, const vector<vector<T>>&
 
     return result_matrix;
 }
-
-template<typename T>
-vector<vector<T>> mul(const vector<vector<T>>& matrix1, const vector<vector<T>>& matrix2) {
+  template<typename T>
+  vector<vector<T>> mul(const vector<vector<T>>& matrix1, const vector<vector<T>>& matrix2) {
     assert(matrix1[0].size() == matrix2.size());
     vector<vector<T>> result_matrix(matrix1.size(), vector<T>(matrix2[0].size()));
 
