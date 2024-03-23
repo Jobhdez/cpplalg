@@ -68,7 +68,7 @@ template <typename T> void print(const vector<T> &coefficients) {
 }
 
 } // namespace Polynomial
-
+/*
 int main() {
   using namespace Polynomial;
   std::vector<int> p = {5, 4, 2, 5};
@@ -77,4 +77,4 @@ int main() {
   print(p2);
   cout << "\n";
   print(p3);
-}
+  }*/
