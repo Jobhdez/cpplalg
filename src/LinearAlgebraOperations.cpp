@@ -112,7 +112,7 @@ vector<vector<T>> mul(const vector<vector<T>> &matrix1,
       
  }
 }
-
+/*
 int main() {
 
   vector<vector<double>> mat = {{3.0,4.0,5.0}, {3.0,4.0,5.0}};
@@ -124,3 +124,4 @@ int main() {
   vector<double> res2 = Vec::add(mat2, mat2);
   Vec::print(res2);
 }
+*/
